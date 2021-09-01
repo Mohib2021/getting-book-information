@@ -9,7 +9,7 @@ const parentOfItems = document.getElementById("books");
 searchBtn.addEventListener("click", () => {
 	const bookName = inputField.value;
 	customizeVisualization();
-	fetch(`http://openlibrary.org/search.json?q=${bookName}`)
+	fetch(`https://openlibrary.org/search.json?q=${bookName}`)
 		.then((res) => res.json())
 		.then((datum) => {
 			const { numFound, docs } = datum; // destructuring object
